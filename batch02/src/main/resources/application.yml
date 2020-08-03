@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springbatch?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    # sql文件位置
+    schema: classpath:/org/springframework/batch/core/schema-drop-mysql.sql
+    # 表示让spring batch在数据库里面创建默认的数据表
+  batch:
+    initialize-schema: always
+    #job:
+      #names: parentJob
